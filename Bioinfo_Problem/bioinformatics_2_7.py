@@ -29,14 +29,16 @@ while True:
 	
 	Code[baseIn_C] = aminoIn_C
 
-'''
-	while True:
-		baseS = input("Enter three-base codon to search: ")
-		baseS_C = baseS.upper()
-		print ("Amino acid for {}: {}".format(baseS_C,Code[baseS_C])
+
+while True:
+	baseS = input("Enter three-base codon to search: ")
+	baseS_C = baseS.upper()
 	
-		if baseS_C == "XXX":
-			print ("Okay, I will switch.")
-			break
-'''
+	if baseS_C == "XXX":
+		print ("Okay, I will switch.")
+		break
+	
+	aminoS = Code[baseS_C]
+	print ("Amino acid for {}: {}".format(baseS_C,aminoS))
+	
 
