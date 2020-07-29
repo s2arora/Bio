@@ -1,4 +1,3 @@
-cnt = 0
 seq = ""
 
 with open("sequence.protein.2.fasta",'r') as fr:
