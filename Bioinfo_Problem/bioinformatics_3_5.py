@@ -6,4 +6,4 @@ with open("sequence.protein.2.fasta",'r') as fr:
 		if cnt == 2:
 			line = line 	
 
-print("The second line is: {}".format(line))
+print("The second line is: {}".format(line.strip()))
