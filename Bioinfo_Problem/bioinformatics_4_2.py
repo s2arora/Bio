@@ -11,15 +11,12 @@ with open("sequence.protein.gb",'r') as fr:
 		if line.startswith("ORIGIN"):
 			ORIGIN_passed = True
 		elif ORIGIN_passed:
-			Origin_trace.append(line[10:])
+			Origin_trace.append(line[10:-1])
 			
-
-print (Origin_trace)
-
 protein = ""
 
-for protein_str in Origin_trace:
-	protein += protein_str
-	
+for protein_line in Origin_trace:
+	protein += protein_line.replace(" ",'') 
+
 print("title:",title+
 		"seq:",protein)
