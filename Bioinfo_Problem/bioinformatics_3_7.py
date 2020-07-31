@@ -8,9 +8,20 @@ with open("sequence.protein.2.fasta",'r') as fr:
 			seq += line.strip()
 
 while True: 
-	num = input("Position: ")
-	if num == "XXX":
+	position = input("Position: ")
+	if position == "XXX":
 		print("Okay, I will stop.")
 		break
-	print("Three amino acids: "+seq[int(num)-1:int(num)+2])
+	else:
+		seq_len = len(seq)
+		try:
+			position = int(position)
+		except:
+			print ("Please input Position nummber")
+			continue
+		if 1 <= position <= seq_len-3:
+			sliced_seq = seq[position-1:position+2]
+			print("Three amino acids: "+sliced_seq)
+		else:
+			print("Invalid range position value")
 

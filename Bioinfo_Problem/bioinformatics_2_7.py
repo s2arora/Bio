@@ -21,7 +21,7 @@ while True:
 	baseIn_C = baseIn.upper()
 	
 	if baseIn_C == "XXX":
-		print ("Okay, I will stop.")
+		print ("Okay, I will switch.")
 		break
 
 	aminoIn = input("Enter amino acid: ")
@@ -35,10 +35,12 @@ while True:
 	baseS_C = baseS.upper()
 	
 	if baseS_C == "XXX":
-		print ("Okay, I will switch.")
+		print ("Okay, I will stop.")
 		break
 	
-	aminoS = Code[baseS_C]
-	print ("Amino acid for {}: {}".format(baseS_C,aminoS))
-	
+	if baseS_C in Code:
+                aminoS = Code[baseS_C]
+                print ("Amino acid for {}: {}".format(baseS_C,aminoS))
+	else:
+                print ("{} codon does not exist.".format(baseS_C))
 

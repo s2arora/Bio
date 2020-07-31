@@ -1,4 +1,8 @@
+def reverse_message(string):
+    return (string[::-1])
+
 message = input("Enter a string: ")
 
-print (''.join(reversed(message)))
+reverse = reverse_message(message)
+print ("Reversed string: "+reverse)
 

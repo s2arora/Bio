@@ -1,5 +1,5 @@
 cnt = 0
-ORIGIN_passed = False
+ORIGIN_flag = False
 Origin_trace = []
 
 with open("sequence.protein.gb",'r') as fr:
@@ -8,8 +8,8 @@ with open("sequence.protein.gb",'r') as fr:
 		if cnt == 1:
 			title = line 		
 		if line.startswith("ORIGIN"):
-			ORIGIN_passed = True
-		elif ORIGIN_passed:
+			ORIGIN_flag = True
+		elif ORIGIN_flag:
 			Origin_trace.append(line.strip())
 			
 protein = ""
